@@ -1,0 +1,82 @@
+name: Bug report
+description: Something in Vaneta OS works differently from how it should.
+type: Bug
+labels: [bug, triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Leave out passwords, tokens, keys and personal data. A security problem goes through private vulnerability reporting, never a public issue (see SECURITY.md).
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      multiple: true
+      options:
+        - Live ISO or boot
+        - Installer
+        - Desktop layout and behaviour
+        - Theme, icons, cursors or fonts
+        - Wallpapers or sounds
+        - System settings and services
+        - Packages and updates
+        - Build, CI or infrastructure
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Vaneta OS version
+      description: The ISO version, or the output of `pacman -Q vaneta-release` on an installed system.
+      placeholder: 26.10, or devel-20261012
+    validations:
+      required: true
+  - type: dropdown
+    id: setup
+    attributes:
+      label: Where does it happen
+      options:
+        - Live session
+        - Installed system
+        - Virtual machine
+        - Not sure
+    validations:
+      required: true
+  - type: dropdown
+    id: firmware
+    attributes:
+      label: Boot mode
+      options:
+        - UEFI
+        - UEFI with Secure Boot
+        - BIOS (legacy)
+        - Not sure
+  - type: input
+    id: hardware
+    attributes:
+      label: Hardware
+      description: Device model, CPU and GPU, or the virtual machine software and its settings.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you saw, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Boot the live ISO in UEFI mode
+        2. Open System Settings
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Relevant lines from `journalctl -b -p warning`, or the installer log in `~/.cache/calamares/session.log`. Redact anything private.
+      render: shell

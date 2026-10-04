@@ -1,0 +1,49 @@
+name: Feature request
+description: Something new, or a change to how something works.
+type: Feature
+labels: [enhancement, triage]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Who runs into it, and what they are trying to do.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should change. Sketches, screenshots and examples from other systems are welcome.
+    validations:
+      required: true
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      multiple: true
+      options:
+        - Live ISO or boot
+        - Installer
+        - Desktop layout and behaviour
+        - Theme, icons, cursors or fonts
+        - Wallpapers or sounds
+        - System settings and services
+        - Packages and updates
+        - Build, CI or infrastructure
+    validations:
+      required: true
+  - type: checkboxes
+    id: impact
+    attributes:
+      label: It involves
+      options:
+        - label: Boot, the installer or the disk layout
+        - label: How packages or updates behave
+        - label: Security or privacy
+        - label: New third-party software, artwork, fonts or sounds (license review needed)
+        - label: New user-facing text
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered

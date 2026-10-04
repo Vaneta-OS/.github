@@ -1,0 +1,22 @@
+name: Task
+description: Engineering work with no user-visible change (refactoring, tooling, documentation, cleanup).
+type: Task
+labels: [task]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      placeholder: "- [ ] ..."

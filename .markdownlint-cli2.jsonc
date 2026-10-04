@@ -1,0 +1,16 @@
+{
+  // The shared rules from Vaneta-OS/ci. The organization profile is the
+  // owner's hand-written page and keeps its own layout.
+  "config": {
+    "default": true,
+    "MD013": false,
+    "MD024": { "siblings_only": true },
+    "MD033": {
+      "allowed_elements": ["a", "b", "br", "div", "h1", "i", "img", "p", "sub"],
+    },
+    "MD041": false,
+    "MD060": false,
+  },
+  "gitignore": true,
+  "ignores": ["profile/README.md"],
+}
