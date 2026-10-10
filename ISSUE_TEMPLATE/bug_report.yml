@@ -28,8 +28,8 @@ body:
     id: version
     attributes:
       label: Vaneta OS version
-      description: The ISO version, or the output of `pacman -Q vaneta-release` on an installed system.
-      placeholder: 26.10, or devel-20261012
+      description: On the live system, the ISO version (`IMAGE_VERSION` in `/etc/os-release`); on an installed system, the output of `pacman -Q vaneta-release`.
+      placeholder: 0.1.0-alpha.1, or devel-20261012
     validations:
       required: true
   - type: dropdown
