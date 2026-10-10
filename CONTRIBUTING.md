@@ -44,7 +44,7 @@ Write in English, plainly. No em dashes, no emoji, and no attribution lines for 
 
 ## Releases
 
-Components use semantic versions (`v1.2.0`); ISO images use the year and month (`v26.10`). A version tag starts the release workflow; nothing is uploaded by hand. Tags are annotated and never reused.
+Every version follows [Semantic Versioning 2.0.0](https://semver.org/): components use `v1.2.0`, and ISO images use the same form with the pre-release stages `alpha`, `beta` and `rc` (`v0.1.0-alpha.1`, `v1.0.0-rc.1`, `v1.0.0`). A version tag starts the release workflow; nothing is uploaded by hand. Tags are annotated and never reused. Only stable versions get a GitHub release, which holds the changelog; ISO images are never attached to one.
 
 ## Assets and licenses
 
